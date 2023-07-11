@@ -1,0 +1,45 @@
+<section id="home-text">
+  <div class="container-custom">
+    <div class="row">
+      <div class="text-lines">
+        {% for block in section.blocks %}
+          <p>{{ block.settings.maintext_id }}</p>
+        {% endfor %}
+      </div>
+      <div class="compact-text">
+        {{ section.settings.compact_text }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home text new",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "compact_text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text line",
+      "settings": [
+        {
+          "type": "text",
+          "id": "maintext_id",
+          "label": "Text line"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home text new"
+    }
+  ]
+}
+{% endschema %}
