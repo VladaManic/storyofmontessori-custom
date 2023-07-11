@@ -1,0 +1,12 @@
+<a href="{{ product_product.url }}" class="prod-wrapper">
+  {% if product_product.featured_image %}
+    <div class="img-wrap">
+      <img
+        src="{{ product_product.featured_image | img_url: '600x600' }}"
+        alt="{{ product_product.title }}"
+        class="featur-img"
+      >
+    </div>
+  {% endif %}
+  <p class="prod-name">{{ product_product.title }}</p>
+</a>
