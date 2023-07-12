@@ -2,9 +2,11 @@
   <div class="container-custom">
     <div class="row">
       <div class="text-lines">
+        {% render 'svg-star' | img_url %}
         {% for block in section.blocks %}
-          <p>{{ block.settings.maintext_id }}</p>
+          <p class="txt-line">{{ block.settings.maintext_id }}</p>
         {% endfor %}
+        {% render 'svg-star' | img_url %}
       </div>
       <div class="compact-text">
         {{ section.settings.compact_text }}
