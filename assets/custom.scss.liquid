@@ -188,8 +188,12 @@ body {
 	color: #B58C67;
 }
 
-.footer #NewsletterForm--footer:focus {
-	
+.footer .newsletter-form__field-wrapper .field:after,
+.footer .field:hover.field:after, 
+.footer .field__input:focus-visible {
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 .footer .title-foo {
